@@ -1,10 +1,15 @@
 <main>
-##  topics:
 
-    What is WebAssembly?
-    Creating a Rust and WebAssembly project skeleton
-    Translating JavaScript code into Rust code
-    Drawing to the screen with HTML5 Canvas
+##  topic
+
+Most Rust/wasm tutorials put alot of effort to reel in Javascript developers and
+assume people want to use their existing dev eco-system. 
+This however gives the impression that wasm is difficult without NPM, Webpack, etc... 
+
+This is a Rust and WebAssembly project skeleton and guide
+
+Our objective:   
+Quickly setup the project (html, js, css) and draw a triangle in the web browser (rust).
 
 ## Context
 
@@ -66,20 +71,20 @@ console_error_panic_hook = "0.1.7"
 
 [dependencies.web-sys]
 version = "0.3.58"
-features = ["console", "Window", "Document", 
-            "HtmlCanvasElement", "CanvasRenderingContext2d", "Element",]
+features = [
+    "console", 
+    "Window", 
+    "Document", 
+    "HtmlCanvasElement", 
+    "CanvasRenderingContext2d", 
+    "Element",
+]
 
-
-[dev-dependencies]
-wasm-bindgen-test = "*"
-futures = "0.3.21"
-js-sys = "0.3.58"
-wasm-bindgen-futures = "0.4.31"
 ```
  ### download dependencies
 
  ```
- wasm-pack build --out-dir www/pkg
+ wasm-pack build --target web --out-dir www/pkg
  ```
 
 ## initial drawing to the HTML Canvas
