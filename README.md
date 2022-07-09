@@ -98,7 +98,7 @@ features = [
   <meta charset="UTF-8">
   <title>wasm triangles</title>
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="icon" href="./favicon.png">
+  <link rel="icon" href="./favicon_96x96.png">
 </head>
 <body>
 

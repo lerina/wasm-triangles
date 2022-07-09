@@ -39,6 +39,6 @@ pub fn main_js() -> Result<(), JsValue> {
     // log_1 expects one argument 
     // [more here](https://www.webassemblyman.com/rustwasm/web_sys_console_log2.html)
     console::log_2(&"Color : %s ".into(), &context.fill_style().into());
-
+    panic!();
     Ok(())
 }
