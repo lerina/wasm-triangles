@@ -1,3 +1,8 @@
+#!/bin/sh
+
+# exit on error and  prints each executed command
+set -ex
+
 # compile for plain vanilla no javascript framework 
 wasm-pack build --target web --out-dir www/pkg
 
